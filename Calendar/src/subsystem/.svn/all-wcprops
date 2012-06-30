@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/112/Koray/src/subsystem
+END
+Cakeday.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/94/Koray/src/subsystem/Cakeday.java
+END
+DatabaseEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/112/Koray/src/subsystem/DatabaseEvent.java
+END
+EventDatabase.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/109/Koray/src/subsystem/EventDatabase.java
+END
+SimpleDateTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/103/Koray/src/subsystem/SimpleDateTime.java
+END
+SimpleTime.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/103/Koray/src/subsystem/SimpleTime.java
+END
+Value.java
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/94/Koray/src/subsystem/Value.java
+END
+Event.java
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/103/Koray/src/subsystem/Event.java
+END
+Period.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/103/Koray/src/subsystem/Period.java
+END
+CakeCal.java
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/103/Koray/src/subsystem/CakeCal.java
+END
+DatabaseConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/112/Koray/src/subsystem/DatabaseConnection.java
+END
+SimpleDate.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/109/Koray/src/subsystem/SimpleDate.java
+END
+ProgramSettings.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/94/Koray/src/subsystem/ProgramSettings.java
+END
+CalendarSettings.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/94/Koray/src/subsystem/CalendarSettings.java
+END
+CREXLException.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/94/Koray/src/subsystem/CREXLException.java
+END
+taskManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/112/Koray/src/subsystem/taskManager.java
+END

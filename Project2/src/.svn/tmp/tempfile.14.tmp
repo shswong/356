@@ -1,0 +1,94 @@
+import java.util.*;
+public class test
+{
+	public static void main(String[] args) {
+	
+<<<<<<< .mine
+		String startTime = "11/16/2010 11:44 AM";
+		String endTime = "11/25/2010 12:00 PM";
+=======
+		String startTime = "5/26/2010 11:44 AM";
+		String endTime = "6/26/2010 12:00 PM";
+>>>>>>> .r112
+		GregorianCalendar startCal = new GregorianCalendar();
+		startCal.setLenient(true);
+		String[] start = splitString(startTime);   
+		//this sets year, month day
+		startCal.set(Integer.parseInt(start[2]),Integer.parseInt(start[0])-1,Integer.parseInt(start[1]));
+		startCal.set(GregorianCalendar.HOUR, Integer.parseInt(start[3]));
+		startCal.set(GregorianCalendar.MINUTE, Integer.parseInt(start[4]));
+		if (start[5].equalsIgnoreCase("AM")) { startCal.set(GregorianCalendar.AM_PM, 0); }
+		else { startCal.set(GregorianCalendar.AM_PM, 1); }
+
+		GregorianCalendar endCal = new GregorianCalendar();
+		endCal.setLenient(true);
+		String[] end = splitString(endTime);
+		endCal.set(Integer.parseInt(end[2]),Integer.parseInt(end[0])-1,Integer.parseInt(end[1]));
+		endCal.set(GregorianCalendar.HOUR, Integer.parseInt(end[3]));
+		endCal.set(GregorianCalendar.MINUTE, Integer.parseInt(end[4]));
+		if (end[5].equalsIgnoreCase("AM")) { endCal.set(GregorianCalendar.AM_PM, 0); }
+		else { endCal.set(GregorianCalendar.AM_PM, 1); }
+
+
+		/*for (int i = startCal.get(Calendar.DATE); i < endCal.get(Calendar.DATE); i++)
+		{
+			startCal.set(Calendar.DATE, i);
+			System.out.println(startCal.get(Calendar.DATE));
+		}*/
+
+		for (int i = startCal.get(Calendar.DAY_OF_YEAR); i < endCal.get(Calendar.DAY_OF_YEAR); i++)
+		{
+<<<<<<< .mine
+			startCal.set(Calendar.DATE, i);
+			//startCal.set(Calendar.DAY_OF_WEEK, i);
+=======
+			startCal.set(Calendar.DAY_OF_YEAR, i);
+>>>>>>> .r112
+			if (startCal.get(Calendar.DAY_OF_WEEK) == Calendar.MONDAY || startCal.get(Calendar.DAY_OF_WEEK) == Calendar.TUESDAY || startCal.get(Calendar.DAY_OF_WEEK) == Calendar.WEDNESDAY || startCal.get(Calendar.DAY_OF_WEEK) == Calendar.THURSDAY || startCal.get(Calendar.DAY_OF_WEEK) == Calendar.FRIDAY)
+			{
+				System.out.println(startCal.get(Calendar.DATE));
+			}
+		}
+	}
+	
+	private static String[] splitDate(String date)
+	{
+		String[] temp1 = date.split(" "); // split by space
+		String[] temp2 = temp1[0].split("/"); // split by /
+		//5/21/2010 10:00 AM
+		return temp2; // return 5 21 2010 in one array
+	}
+
+	private static String[] splitTime(String date)
+	{
+		String[] temp1 = date.split(" "); // split by space
+		String[] temp2 = temp1[1].split(":"); // split by :
+		//5/21/2010 10:00 AM
+		String[] temp3 = {temp2[0], temp2[1], temp1[2]};
+		return temp3; // return 10 00 AM in one array
+	}
+
+	private static String[] splitString(String date)
+	{
+		String[] temp1 = splitDate(date);
+		String[] temp2 = splitTime(date);
+		String[] temp3 = new String[6];
+		return dateFill(temp3, temp2[0], temp2[1], temp2[2], temp1[0], temp1[1], temp1[2]);
+	}
+
+	private static String[] dateFill(String[] date, String hours, String minutes, String ampm, String month, String day, String year) {
+		date[0] = month;
+		date[1] = day;
+		date[2] = year;
+		date[3] = hours;
+		date[4] = minutes;
+		date[5] = ampm;
+		return date;
+	}
+
+	private String dateString(String[] date) {
+		//return month+" "+day+", "+year+" "+hours+":"+minutes+" "+ampm
+		//5/21/2010 10:00 AM
+		return date[3]+"/"+date[4]+"/ "+date[5]+" "+date[0]+":"+date[1]+" "+date[2];
+	}
+}

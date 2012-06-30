@@ -1,0 +1,49 @@
+8
+
+dir
+112
+https://calendar-cs356-cpp.googlecode.com/svn/Koray/src
+https://calendar-cs356-cpp.googlecode.com/svn
+
+
+
+2010-06-01T00:39:26.372400Z
+112
+mtmargala
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+40ca6250-f2c9-396e-cbfe-1c1c2df7b9f7
+
+opensource
+dir
+
+gui
+dir
+
+panelgui
+dir
+
+widgets
+dir
+
+observer
+dir
+
+calendar
+dir
+
+subsystem
+dir
+

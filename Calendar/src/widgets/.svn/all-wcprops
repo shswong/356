@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/94/Koray/src/widgets
+END
+FormatBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/94/Koray/src/widgets/FormatBox.java
+END
+RecurrenceWidget.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/94/Koray/src/widgets/RecurrenceWidget.java
+END
+WeeklyRecurrenceWidget.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/94/Koray/src/widgets/WeeklyRecurrenceWidget.java
+END
+NthDayOfMonthRecurrenceWidget.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/94/Koray/src/widgets/NthDayOfMonthRecurrenceWidget.java
+END
+AdvancedRecurrenceWidget.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/94/Koray/src/widgets/AdvancedRecurrenceWidget.java
+END
+NthDayRecurrenceWidget.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/94/Koray/src/widgets/NthDayRecurrenceWidget.java
+END

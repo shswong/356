@@ -1,0 +1,107 @@
+import java.sql.*;
+import java.util.Scanner;
+
+public class main {
+        
+    public static void main(String[] args) throws Exception {
+        String url = "jdbc:odbc:cs356test";
+        Connection con;
+        
+        Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+        con = DriverManager.getConnection(url, "myLogin","myPassword");
+        
+        taskManager PPS = new taskManager(con);
+        printDB(con);
+        
+        Scanner keyboard = new Scanner(System.in);
+        	String[] startTime = new String[2];
+        	String[] endTime = new String[2];
+            System.out.println("Enter event name: ");
+            String eventName = keyboard.nextLine();
+            System.out.println("Enter start time and date: ");
+            String time1 = keyboard.nextLine();
+            System.out.println("Enter end time and date: ");
+            String time2 = keyboard.nextLine();
+            //System.out.println("Enter date: ");
+            //String date = keyboard.nextLine();
+            System.out.println("Enter event type: ");
+            String eventType = keyboard.nextLine();
+            System.out.println("Enter how important this is (1 is most important, 5 is least, 0 is indifferent");
+            int priority = keyboard.nextInt();
+            
+            /*startTime[0] = date;
+            endTime[0] = date;
+            startTime[1] = time1;
+            endTime[1] = time2;
+            
+            String eventStartTime = dateString(startTime);
+            String eventEndTime = dateString(endTime);
+            */
+            int classNumber = 1;
+        
+        PPS.addEvent(con, eventName, time1, time2, eventType, classNumber, priority);
+        
+        if (eventType.equals("class"))
+        	classNumber++;
+        
+        printDB(con);
+        
+        con.close();
+    }
+    public static void printDB(Connection con) throws Exception{
+        Statement stat;
+        stat = con.createStatement();
+        ResultSet rs;
+        
+        String query = "select * from Table1";
+        rs = stat.executeQuery(query);
+        System.out.println("Table1 :");
+        while(rs.next())
+        {
+            String status = rs.getString("eventID");
+            status += "\t" + rs.getString("eventName");
+            status += "\t" + rs.getString("startTime");
+            status += "\t" + rs.getString("endTime");
+            status += "\t" + rs.getString("eventType");
+            status += "\t" + rs.getString("classNumber");
+            status += "\t" + rs.getString("priority");
+            status += "\t" + rs.getString("marked");
+            System.out.println(status);
+        }
+        rs.close();
+        stat.close();
+    }
+    
+    private static String dateString(String[] date) {
+        //return month+" "+day+", "+year+" "+hours+":"+minutes+" "+ampm
+        //5/21/2010 10:00 AM
+        return date[0] + date[1];
+    }
+    
+    /*public static void addEvent(Connection con) throws Exception {
+            //Statement stat = con.createStatement();
+            
+            //String query = "INSERT INTO Table1 (eventName,startTime,endTime,startDate,endDate) VALUES ('Los Angeles', '10:20AM', '10:45AM','6/10/2010','6/10/2010')";
+            String query = "INSERT INTO Table1 (eventName,startTime,endTime,eventDate) VALUES (?,?,?,?)";
+            PreparedStatement ps = con.prepareStatement(query);
+            //int rows = stat.executeUpdate(query);
+            
+            Scanner keyboard = new Scanner(System.in);
+            System.out.println("Enter event name: ");
+            String name = keyboard.nextLine();
+            System.out.println("Enter start time: ");
+            String time1 = keyboard.nextLine();
+            System.out.println("Enter end time: ");
+            String time2 = keyboard.nextLine();
+            System.out.println("Enter date: ");
+            String date1 = keyboard.nextLine();
+            
+            ps.setString(1,name);
+            ps.setString(2,time1);
+            ps.setString(3,time2);
+            ps.setString(4,date1);
+            
+            int rows = ps.executeUpdate();
+            //stat.close();
+    }*/
+}

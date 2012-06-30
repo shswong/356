@@ -1,0 +1,192 @@
+public class TaskManager
+{
+     private ArrayList<Event> listOfClasses = new ArrayList();
+
+     private void autoSchedule(Connection con) throws Exception {
+     Statement stat;
+     stat = con.createStatement();
+     ResultSet rs;
+     String query = "SELECT * FROM Table1";
+     rs = stat.executeQuery(query); 
+         
+        int eventID;
+        String eventName;
+        DateFormat startTime;
+        DateFormat endTime;
+        String eventType;
+        int classNumber;
+        int priority;
+         
+
+         
+         //get all the "class" events to find their start and end times
+         while(rs.next())
+         {
+             if (eventType.ignorecase.equals("class")
+             {
+                 eventID = rs.getInt("eventID");
+                 eventName = rs.getString("eventName");
+                 startTime = rs.getString("startTime");
+                 endTime = rs.getString("endTime");
+                 eventType = rs.getString("eventType");
+                 classNumber = rs.getInt("classNumber");
+                 priority = rs.getInt("priority");
+                 
+                //Event newEvent = new Event(eventID, eventName, startTime, endTime, eventType, classnumber, priority);
+                 
+                 listOfClasses.add(new Event(eventID, eventName, startTime, endTime, eventType, classnumber, priority);
+
+<<<<<<< .mine
+             }//end if class
+             
+         }//end while
+         
+         String insert = "INSERT INTO Table1 (eventName,startTime,endTime,startDate,endDate) VALUES("Study",
+     } //end TaskManager class   
+     
+/*     private boolean check(Date startTime, Date endTime) {
+         for (int i = 0; i < listOfClasses.size(); i++)
+         {
+             if (startTime.toString.equals(listOfClasses.get(i).getStartTime().toString()) &&
+         }
+     }*/
+     
+     private String[] splitDate(String date)
+     {
+         String[] temp1 = date.split(" "); // split by space
+         String[] temp2 = temp1[0].split("/)"; // split by /
+         //5/21/2010 10:00 AM
+         return temp2; // return 5 21 2010 in one array
+     }
+     
+     private String[] splitTime(String date)
+     {
+         String[] temp1 = date.split(" "); // split by space
+         String[] temp2 = temp1[1].split(":"); // split by :
+         //5/21/2010 10:00 AM
+         String[] temp3 = {temp2[0], temp2[1], temp1[2]};
+         return temp3; // return 10 00 AM in one array
+     }
+     
+     private String[] dateFill(String[] date, String hours, String minutes, String ampm, String month, String day, String year) {
+         date[0] = hours;
+         date[1] = minutes;
+         date[2] = ampm;
+         date[3] = month;
+         date[4] = day;
+         date[5] = year;
+         return date;
+     }
+     
+     private String dateString(String[] date) {
+         //return month+" "+day+", "+year+" "+hours+":"+minutes+" "+ampm
+         //5/21/2010 10:00 AM
+         return date[3]+"/"+date[4]+"/ "+date[5]+" "+date[0]+":"+date[1]+" "+date[2];
+     }
+     
+     public void add(Connection con) throws Exception {
+            String query = "INSERT INTO Table1 (eventName,startTime,endTime,startDate,endDate) VALUES (?,?,?,?,?)";
+            PreparedStatement ps = con.prepareStatement(query);
+            
+            Scanner keyboard = new Scanner(System.in);
+            System.out.println("Enter event name: ");
+            String name = keyboard.nextLine();
+            System.out.println("Enter start time: ");
+            String time1 = keyboard.nextLine();
+            System.out.println("Enter end time: ");
+            String time2 = keyboard.nextLine();
+            System.out.println("Enter start date: ");
+            String date1 = keyboard.nextLine();
+            System.out.println("Enter end date: ");
+            String date2 = keyboard.nextLine();
+            
+            ps.setString(1,name);
+            ps.setString(2,time1);
+            ps.setString(3,time2);
+            ps.setString(4,date1);
+            ps.setString(5,date2);
+            
+            int rows = ps.executeUpdate();
+         }
+         
+     public void delete(int ID) {
+         String query = "DELETE FROM Table 1 WHERE eventID = " + ID";
+         }
+}=======
+             }//end if class
+             
+         }//end while
+         
+         String insert = "INSERT INTO Table1 (eventName,startTime,endTime,startDate,endDate) VALUES("Study",
+     } //end TaskManager class   
+     
+/*     private boolean check(Date startTime, Date endTime) {
+         for (int i = 0; i < listOfClasses.size(); i++)
+         {
+             if (startTime.toString.equals(listOfClasses.get(i).getStartTime().toString()) &&
+         }
+     }*/
+     
+     private String[] splitDate(String date)
+     {
+         String[] temp1 = date.split(" "); // split by space
+         String[] temp2 = temp1[0].split("/)"; // split by /
+         //5/21/2010 10:00 AM
+         return temp2; // return 5 21 2010 in one array
+     }
+     
+     private String[] splitTime(String date)
+     {
+         String[] temp1 = date.split(" "); // split by space
+         String[] temp2 = temp1[1].split(":"); // split by :
+         //5/21/2010 10:00 AM
+         String[] temp3 = {temp2[0], temp2[1], temp1[2]};
+         return temp3; // return 10 00 AM in one array
+     }
+     
+     private String[] dateFill(String[] date, String hours, String minutes, String ampm, String month, String day, String year) {
+         date[0] = hours;
+         date[1] = minutes;
+         date[2] = ampm;
+         date[3] = month;
+         date[4] = day;
+         date[5] = year;
+         return date;
+     }
+     
+     private String dateString(String[] date) {
+         //return month+" "+day+", "+year+" "+hours+":"+minutes+" "+ampm
+         //5/21/2010 10:00 AM
+         return date[3]+"/"+date[4]+"/ "+date[5]+" "+date[0]+":"+date[1]+" "+date[2];
+     }
+     
+     public void add(Connection con) throws Exception {
+            String query = "INSERT INTO Table1 (eventName,startTime,endTime,startDate,endDate) VALUES (?,?,?,?,?)";
+            PreparedStatement ps = con.prepareStatement(query);
+            
+            Scanner keyboard = new Scanner(System.in);
+            System.out.println("Enter event name: ");
+            String name = keyboard.nextLine();
+            System.out.println("Enter start time: ");
+            String time1 = keyboard.nextLine();
+            System.out.println("Enter end time: ");
+            String time2 = keyboard.nextLine();
+            System.out.println("Enter start date: ");
+            String date1 = keyboard.nextLine();
+            System.out.println("Enter end date: ");
+            String date2 = keyboard.nextLine();
+            
+            ps.setString(1,name);
+            ps.setString(2,time1);
+            ps.setString(3,time2);
+            ps.setString(4,date1);
+            ps.setString(5,date2);
+            
+            int rows = ps.executeUpdate();
+         }
+         
+     public void delete(int ID) {
+         String query = "DELETE FROM Table 1 WHERE eventID = " + ID";
+         }
+}
+>>>>>>> .r20

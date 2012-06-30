@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/108/branches
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/3/branches/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/3/branches/.project
+END
+db2.mdb
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/102/branches/db2.mdb
+END

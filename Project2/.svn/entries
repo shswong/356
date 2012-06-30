@@ -1,0 +1,77 @@
+8
+
+dir
+112
+https://calendar-cs356-cpp.googlecode.com/svn/branches
+https://calendar-cs356-cpp.googlecode.com/svn
+
+
+
+2010-05-31T23:04:14.065129Z
+108
+raptrex
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+40ca6250-f2c9-396e-cbfe-1c1c2df7b9f7
+
+.classpath
+file
+
+
+
+
+2010-05-19T20:56:59.560342Z
+52066c574fbd09ed317a73ebe8ef2d0b
+2010-05-18T18:52:49.854439Z
+3
+mtmargala
+
+.project
+file
+
+
+
+
+2010-05-19T20:56:59.566342Z
+d81ee5a4a1555e119dbb3ffb204d1500
+2010-05-18T18:52:49.854439Z
+3
+mtmargala
+
+src
+dir
+
+db2.mdb
+file
+
+
+
+
+2010-05-26T19:08:51.101227Z
+61a24471b3e29785bf64026676be9e80
+2010-05-31T19:53:09.771998Z
+102
+mtmargala
+has-props
+
+
+
+
+db2.mdb.r91
+db2.mdb.r112
+
+.settings
+dir
+
